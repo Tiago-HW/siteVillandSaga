@@ -1,38 +1,62 @@
 body {
     background-color: gray; 
-    text: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+}
+header{
+    background-color: darkred;
 }
 .imgLogo{
     text-align: center;
+    margin-top: 0;
 }
 #imgLogo{
     width: 200px;
     height: auto;
+    filter: drop-shadow(0px 10px 10px black);
 }
+
 .menu{
     width: 100%;
     height: auto;
-    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     background-color: darkred;
+    margin-left: 0px;
+    margin-top: 0%;
+    margin-bottom: 0%;
     border-radius: 4px;
 }
 .menu a{
     display: flex;
     justify-content: center;
     align-items: center;
-
     text-decoration: none;
     font-size: 30px;
     color: black;
+    margin: 0;
     
 }
 .menu a:hover{
-    background-color: red;
+    background-color: rgb(103, 2, 2);
+    border: 1px solid black;
+    border-radius:4px;
+    color: white;
 }
 #imgBanner{
     width: 100%;
     height: auto;
     margin: 0 auto;
+}
+#divBanner{
+    position: relative;
+    display: flex;
+}
+.divLogo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(2);
 }

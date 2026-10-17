@@ -1,104 +1,116 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <title>Viland Saga</title>
-   </head>
-   <body bgcolor="gray" text="white">
-    <p align="center">
-        <a href="../index.html">
-            <img src="../img/logo-removebg-preview.png" height="200" />
-        </a>
-    </p>
-    <hr style="border-color: red; width: 95%;"/>
-    <h1 align="center">
-        <a href="../index.html" style="color: darkred;">Inicio |</a>
-        <a href="./pag_historia.html" style="color: darkred;;">Sobre a Hitória |</a>
-        <a href="./personagens.html" style="color: darkred;;">Personagens |</a>
-        <a href="./comunidade.html" style="color: darkred;">Comunidade</a>
-    </h1>
-    <hr style="border-color: red; width: 80%;"/>
-    <p align="center">
-        <img src="../img/pordosol.jpg" width="100%" height="auto"/>
-    </p>
-    
-    <h1 align="center" style="color: black;">Obrigado por visitar o nosso site sobre Vinland Saga!</h1>
 
-    <h2 align="center" style="color: black;">Este projeto foi desenvolvido como uma atividade acadêmica dedicada a homenagear a incrível obra de Makoto Yukimura. Esperamos que a sua navegação pelas páginas de personagens, história e comunidade tenha sido agradável e informativa.</h2>
-    <hr style="border-color: red; width: 80%;"/>
+<head>
+  <meta charset="UTF-8">
+  <title>Viland Saga</title>
+  <link rel="stylesheet" href="../css/estilo.css">
+  <linK rel="icon" type="image/.icon" href="../img/EspadaIcone.png">
+</head>
 
-    <p align="center">
-      <iframe width="800" height="500" src="https://www.youtube.com/embed/l5wAdQ-UkWY?si=ygBbRWvb7yePUkLh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>    </p>
-     <hr style="border-color: red; width: 80%;"/>
+<body>
+  <header>
+      <p class="imgLogo">
+          <a href="./index.html">
+              <img id="imgLogo" src="../img/logo_branco-removebg-preview.png" />
+          </a>
+      </p>
+      <div class="menu">
+          <a href="../index.html">Inicio </a>
+          <a href="./pag_historia.html">Sobre a Hitória </a>
+          <a href="./personagens.html">Personagens </a>
+          <a href="./comunidade.html">Comunidade</a>
+      </div>
+  </header>
 
-     <h1 align="center" style="color: black;">Sua opinião conta muito. Deixe seu feedback sobre o site</h1>
+  <img id="imgBanner" src="../img/Banner1.jpg" alt="banner ilustrativo personagens"
+      title="banner ilustrativo personagens" />
 
-     <table border="2" align="center" width="500" cellpadding="8" cellspacing="0" style="color:black">
-  <tr>
-    <th colspan="2" align="center">
-      <h2>Envie seu Feedback</h2>
-    </th>
-  </tr>
-  
-  <!-- Linha: Nome -->
-  <tr>
-    <td align="right" width="30%">
-      <label for="nome"><strong>Nome:</strong></label>
-    </td>
-    <td width="70%">
-      <input type="text" name="nome" placeholder="Seu nome completo" style="width: 95%;">
-    </td>
-  </tr>
+  <h1 align="center" style="color: black;">Obrigado por visitar o nosso site sobre Vinland Saga!</h1>
 
-  <!-- Linha: E-mail -->
-  <tr>
-    <td align="right">
-      <label for="email"><strong>E-mail:</strong></label>
-    </td>
-    <td>
-      <input type="email" name="email" placeholder="seuemail@exemplo.com" style="width: 95%;">
-    </td>
-  </tr>
+  <h2 align="center" style="color: black;">Este projeto foi desenvolvido como uma atividade acadêmica dedicada a
+    homenagear a incrível obra de Makoto Yukimura. Esperamos que a sua navegação pelas páginas de personagens, história
+    e comunidade tenha sido agradável e informativa.</h2>
+  <hr style="border-color: red; width: 80%;" />
 
-  <!-- Linha: Número -->
-  <tr>
-    <td align="right">
-      <label for="numero"><strong>Número:</strong></label>
-    </td>
-    <td>
-      <input type="tel" name="numero" placeholder="(00) 00000-0000" style="width: 95%;">
-    </td>
-  </tr>
+  <p align="center">
+    <iframe width="800" height="500" src="https://www.youtube.com/embed/l5wAdQ-UkWY?si=ygBbRWvb7yePUkLh"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </p>
+  <hr style="border-color: red; width: 80%;" />
 
-  <!-- Linha: Feedback -->
-  <tr>
-    <td align="right" valign="top">
-      <label for="feedback"><strong>Feedback:</strong></label>
-    </td>
-    <td>
-      <textarea name="feedback" rows="4" placeholder="Escreva sua mensagem aqui..." style="width: 95%;"></textarea>
-    </td>
-  </tr>
+  <h1 align="center" style="color: black;">Sua opinião conta muito. Deixe seu feedback sobre o site</h1>
 
-  <!-- Linha: Botão de Enviar -->
-  <tr>
-    <td colspan="2" align="center">
-      <input type="reset" value="Enviar Feedback" onclick="alert('Obrigado pelo seu feedback!')">
-    </td>
-  </tr>
-</table>
+  <table border="2" align="center" width="500" cellpadding="8" cellspacing="0" style="color:black">
+    <tr>
+      <th colspan="2" align="center">
+        <h2>Envie seu Feedback</h2>
+      </th>
+    </tr>
+
+    <!-- Linha: Nome -->
+    <tr>
+      <td align="right" width="30%">
+        <label for="nome"><strong>Nome:</strong></label>
+      </td>
+      <td width="70%">
+        <input type="text" name="nome" placeholder="Seu nome completo" style="width: 95%;">
+      </td>
+    </tr>
+
+    <!-- Linha: E-mail -->
+    <tr>
+      <td align="right">
+        <label for="email"><strong>E-mail:</strong></label>
+      </td>
+      <td>
+        <input type="email" name="email" placeholder="seuemail@exemplo.com" style="width: 95%;">
+      </td>
+    </tr>
+
+    <!-- Linha: Número -->
+    <tr>
+      <td align="right">
+        <label for="numero"><strong>Número:</strong></label>
+      </td>
+      <td>
+        <input type="tel" name="numero" placeholder="(00) 00000-0000" style="width: 95%;">
+      </td>
+    </tr>
+
+    <!-- Linha: Feedback -->
+    <tr>
+      <td align="right" valign="top">
+        <label for="feedback"><strong>Feedback:</strong></label>
+      </td>
+      <td>
+        <textarea name="feedback" rows="4" placeholder="Escreva sua mensagem aqui..." style="width: 95%;"></textarea>
+      </td>
+    </tr>
+
+    <!-- Linha: Botão de Enviar -->
+    <tr>
+      <td colspan="2" align="center">
+        <input type="reset" value="Enviar Feedback" onclick="alert('Obrigado pelo seu feedback!')">
+      </td>
+    </tr>
+  </table>
 
 
-    <br/>
-    <hr style="border-color: red; width: 80%;"/>
-    <h1 align="center">
-        <a href="../index.html" style="color: darkred;">Inicio |</a>
-        <a href="./pag_historia.html" style="color: darkred;;">Sobre a Hitória |</a>
-        <a href="./personagens.html" style="color: darkred;;">Personagens |</a>
-        <a href="./comunidade.html" style="color: darkred;">Comunidade</a>
-    </h1>
-    <hr style="border-color: red; width: 95%;"/>
-    <br/>
-    <p align="center" style="color: black;">© Projeto de front-end acadêmico de Tiago Almeida de Abreu baseado no mangá e anime de Makoto Yukimura. Todos os direitos reservados aos estúdios e autores originais.</p>
-   </body>
+  <br />
+  <hr style="border-color: red; width: 80%;" />
+  <h1 align="center">
+    <a href="../index.html" style="color: darkred;">Inicio |</a>
+    <a href="./pag_historia.html" style="color: darkred;;">Sobre a Hitória |</a>
+    <a href="./personagens.html" style="color: darkred;;">Personagens |</a>
+    <a href="./comunidade.html" style="color: darkred;">Comunidade</a>
+  </h1>
+  <hr style="border-color: red; width: 95%;" />
+  <br />
+  <p align="center" style="color: black;">© Projeto de front-end acadêmico de Tiago Almeida de Abreu baseado no mangá e
+    anime de Makoto Yukimura. Todos os direitos reservados aos estúdios e autores originais.</p>
+</body>
+
 </html>
