@@ -1,5 +1,5 @@
 body {
-    background-color: gray; 
+    background-color: #cfcac1; 
     margin: 0;
     padding: 0;
     width: 100%;
@@ -64,4 +64,336 @@ header{
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%) scale(2);
+}
+
+
+/* =====================================================
+   A PARTIR DAQUI: conteúdo, rodapé e componentes.
+   As regras do cabeçalho (acima) não foram alteradas.
+   Estilo: preto e branco de mangá + vermelho escuro.
+   ===================================================== */
+
+:root{
+    --vinho: darkred;
+    --vinho-escuro: rgb(103, 2, 2);
+    --tinta: #141414;
+    --papel: #f3f0ea;
+    --sombra: 8px 8px 0 var(--vinho);
+}
+
+::selection{
+    background-color: var(--vinho);
+    color: white;
+}
+
+/* ---------- Área de conteúdo (como uma página de mangá) ---------- */
+.conteudo{
+    box-sizing: border-box;
+    max-width: 1100px;
+    margin: 32px auto;
+    padding: 40px 32px 48px;
+    background-color: var(--papel);
+    color: var(--tinta);
+    font-family: Georgia, "Times New Roman", serif;
+    border: 1px solid var(--tinta);
+    border-top: 6px solid var(--vinho);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* ---------- Títulos ---------- */
+.conteudo h1,
+.conteudo h2{
+    max-width: 900px;
+    margin: 0 auto 1.2rem;
+    text-align: center;
+    color: var(--tinta);
+    line-height: 1.3;
+}
+.conteudo h1{
+    font-size: clamp(1.5rem, 3vw, 2.1rem);
+    letter-spacing: 0.03em;
+}
+.conteudo h1::after{
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    margin: 0.7rem auto 0;
+    background-color: var(--vinho);
+}
+.conteudo h2{
+    font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+    font-weight: 600;
+}
+
+/* Nome dos personagens (h2 logo acima de cada card) */
+.conteudo h2:has(+ .card-personagem){
+    font-size: 2rem;
+    color: var(--vinho);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+.conteudo h2:has(+ .card-personagem)::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 0.5rem auto 0;
+    background-color: var(--tinta);
+}
+
+/* ---------- Texto ---------- */
+.conteudo p{
+    max-width: 800px;
+    margin: 0 auto 1.5rem;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.75;
+}
+.conteudo p.figura{
+    max-width: none;
+    margin: 1.5rem 0 2rem;
+    padding-right: 8px; /* espaço para a sombra das imagens */
+}
+
+/* ---------- Links ---------- */
+.conteudo a{
+    color: var(--vinho);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: color 0.15s, border-color 0.15s;
+}
+.conteudo a:hover,
+.conteudo a:focus-visible{
+    color: var(--vinho-escuro);
+    border-bottom-color: currentColor;
+    outline: none;
+}
+.conteudo h1.links-plataformas{
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+.conteudo h1.links-plataformas::after{
+    display: none;
+}
+
+/* ---------- Divisores (traço de tinta) ---------- */
+.conteudo hr{
+    width: 80%;
+    height: 4px;
+    margin: 2.5rem auto;
+    border: 0;
+    background: linear-gradient(90deg, transparent, var(--vinho), var(--tinta), var(--vinho), transparent);
+}
+
+/* ---------- Imagens (quadro de mangá) ---------- */
+.conteudo img{
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border: 3px solid var(--tinta);
+    box-shadow: var(--sombra);
+}
+.conteudo img[height="750"]{
+    width: auto;
+    height: 750px;
+}
+
+/* ---------- Vídeo ---------- */
+.conteudo iframe{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    border: 3px solid var(--tinta);
+    box-shadow: var(--sombra);
+}
+
+/* ---------- Cards de personagens ---------- */
+.card-personagem{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    border: 3px solid var(--tinta);
+    box-shadow: var(--sombra);
+}
+.card-personagem tbody{
+    display: block;
+}
+.card-personagem tr{
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    align-items: center;
+}
+.card-personagem td{
+    display: block;
+    box-sizing: border-box;
+    padding: 24px;
+}
+.card-personagem td:last-child{
+    padding: 16px;
+    text-align: center;
+}
+.card-personagem img{
+    width: 100%;
+    max-width: 500px;
+}
+.card-personagem h3{
+    margin: 0 0 1rem;
+    font-size: 1.05rem;
+    font-weight: normal;
+    line-height: 1.7;
+    text-align: justify;
+    color: var(--tinta);
+}
+.card-personagem h3 + h3{
+    margin-bottom: 0;
+    padding: 0.8rem 1rem;
+    background-color: var(--papel);
+    border-left: 4px solid var(--vinho);
+}
+/* cards pares: imagem à esquerda, texto à direita */
+.card-personagem:nth-of-type(even) td:first-child{
+    order: 2;
+}
+.card-personagem:nth-of-type(even) td:last-child{
+    order: 1;
+}
+
+/* ---------- Formulário de feedback ---------- */
+.form-feedback{
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 560px;
+    margin: 1.5rem auto 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    border: 3px solid var(--tinta);
+    box-shadow: var(--sombra);
+}
+.form-feedback th{
+    padding: 0.4rem 1rem;
+    text-align: center;
+    background-color: var(--vinho);
+    color: white;
+}
+.form-feedback th h2{
+    max-width: none;
+    margin: 0.4rem 0;
+    font-size: 1.5rem;
+    color: white;
+}
+.form-feedback td{
+    padding: 10px 14px;
+}
+.form-feedback td:first-child{
+    width: 30%;
+    text-align: right;
+    white-space: nowrap;
+}
+.form-feedback td[colspan]{
+    width: auto;
+    text-align: center;
+}
+.form-feedback input[type="text"],
+.form-feedback input[type="email"],
+.form-feedback input[type="tel"],
+.form-feedback textarea{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.6rem 0.7rem;
+    font: inherit;
+    color: var(--tinta);
+    background-color: var(--papel);
+    border: 2px solid var(--tinta);
+    border-radius: 0;
+}
+.form-feedback textarea{
+    resize: vertical;
+}
+.form-feedback input:focus,
+.form-feedback textarea:focus{
+    outline: none;
+    border-color: var(--vinho);
+    box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.25);
+}
+.form-feedback input[type="reset"]{
+    padding: 0.7rem 1.8rem;
+    font: inherit;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    color: white;
+    background-color: var(--vinho);
+    border: 2px solid var(--tinta);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.form-feedback input[type="reset"]:hover{
+    background-color: var(--vinho-escuro);
+}
+
+/* ---------- Rodapé (mesma família visual do menu) ---------- */
+.rodape{
+    padding: 24px 16px 22px;
+    text-align: center;
+    background-color: darkred;
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    border-top: 6px solid var(--tinta);
+}
+.rodape-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 0.5rem;
+    margin-bottom: 1rem;
+}
+.rodape-menu a{
+    padding: 0.3rem 0.7rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.rodape-menu a:hover{
+    background-color: rgb(103, 2, 2);
+    border-color: black;
+}
+.rodape p{
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #f1dcdc;
+}
+
+/* ---------- Telas estreitas ---------- */
+@media (max-width: 800px){
+    .conteudo{
+        margin: 16px 12px;
+        padding: 24px 16px 32px;
+    }
+    .card-personagem tr{
+        grid-template-columns: 1fr;
+    }
+    .card-personagem:nth-of-type(even) td:first-child,
+    .card-personagem:nth-of-type(even) td:last-child{
+        order: 0;
+    }
+    .conteudo img[height="750"]{
+        height: auto;
+    }
+    .rodape-menu a{
+        font-size: 1rem;
+    }
 }
